@@ -75,6 +75,7 @@ describe('BankAccount', () => {
 
     expect(fetchedBalance).toBe(balance);
     expect(typeof fetchedBalance).toBe('number');
+    expect(fetchedBalance).toEqual(balance);
   });
 
   test('should set new balance if fetchBalance returned number', async () => {

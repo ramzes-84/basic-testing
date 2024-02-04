@@ -56,11 +56,17 @@ describe('simpleCalculator tests', () => {
   });
 
   test('should return null for invalid arguments', () => {
-    const result = simpleCalculator({
+    const resultOne = simpleCalculator({
       a: '5',
       b: 3,
       action: Action.Add,
     });
-    expect(result).toBeNull();
+    const resultTwo = simpleCalculator({
+      a: 5,
+      b: '3',
+      action: Action.Add,
+    });
+    expect(resultOne).toBeNull();
+    expect(resultTwo).toBeNull();
   });
 });
